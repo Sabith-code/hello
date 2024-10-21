@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
-  <base href="/" />
-  <link rel="icon" href="/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Detective Bookstore</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #e8f5e9;
+    }
+    
+    nav {
+        background-color: #388e3c;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    
+    nav a:hover {
+        background-color: #4caf50;
+    }
+    
+    .header {
+        background-color: #43a047;
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        color: #388e3c;
+    }
+    
+    .book {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9fbe7;
+    }
+    
+    .recommendations {
+        background-color: #c8e6c9;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #388e3c;
+        color: white;
+    }
+    
+    input[type="text"], input[type="email"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    input[type="submit"] {
+        background-color: #388e3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #4caf50;
+    }
+    </style>
 </head>
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#books">Books</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <header id="home" class="header">
+        <h1>Welcome to the Detective Bookstore</h1>
+        <p>Your one-stop shop for thrilling detective novels!</p>
+    </header>
+    
+    <section id="books" class="container">
+        <h2>Featured Detective Books</h2>
 
+        <div class="book">
+            <h3>The Hound of the Baskervilles</h3>
+            <p><strong>Author:</strong> Arthur Conan Doyle</p>
+            <p>This novel follows Sherlock Holmes as he investigates the legend of a supernatural hound haunting the Baskerville family.</p>
+        </div>
+        
+        <div class="book">
+            <h3>Gone Girl</h3>
+            <p><strong>Author:</strong> Gillian Flynn</p>
+            <p>A psychological thriller that examines the complexities of marriage through the lens of a mysterious disappearance.</p>
+        </div>
+        
+        <div class="book">
+            <h3>The Girl with the Dragon Tattoo</h3>
+            <p><strong>Author:</strong> Stieg Larsson</p>
+            <p>Journalist Mikael Blomkvist and hacker Lisbeth Salander work together to solve a decades-old disappearance in this gripping mystery.</p>
+        </div>
+
+        <div class="book">
+            <h3>Murder on the Orient Express</h3>
+            <p><strong>Author:</strong> Agatha Christie</p>
+            <p>Detective Hercule Poirot investigates a murder aboard the luxurious Orient Express, unraveling a web of lies and secrets.</p>
+        </div>
+        
+        <div class="book">
+            <h3>Big Little Lies</h3>
+            <p><strong>Author:</strong> Liane Moriarty</p>
+            <p>A clever examination of friendship and secrets, culminating in a shocking murder at a school trivia night.</p>
+        </div>
+    </section>
+
+    <section class="recommendations">
+        <h2>Recommended Reads</h2>
+        <div class="book">
+            <h3>The Da Vinci Code</h3>
+            <p><strong>Author:</strong> Dan Brown</p>
+            <p>When a curator is found murdered, symbologist Robert Langdon is called to unravel a complex mystery that spans centuries.</p>
+        </div>
+
+        <div class="book">
+            <h3>In the Woods</h3>
+            <p><strong>Author:</strong> Tana French</p>
+            <p>A detective with a troubled past investigates a young girl's murder in a small Irish town, bringing old memories to the surface.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or suggestions, feel free to reach out!</p>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Detective Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
